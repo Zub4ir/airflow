@@ -1,0 +1,30 @@
+services:
+
+  airflow:
+    container_name: airflow
+    restart: always    
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile
+    image: zubair/airflow-public:latest
+    environment:
+      - TZ=Africa/Johannesburg
+      - DEBIAN_FRONTEND=noninteractive
+    ports:
+      - 8080:8080
+    depends_on:
+      - quebaka
+
+  quebaka:
+    container_name: quebaka
+    restart: always
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    image: zubair/quebaka-public:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=bendyourarmstolooklikewings
+      - TZ=Africa/Johannesburg
+      - DEBIAN_FRONTEND=noninteractive
+    ports:
+      - 3306:3306

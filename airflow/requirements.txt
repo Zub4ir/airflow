@@ -1,0 +1,5 @@
+bizdays==1.0.2
+holidays==0.53
+pandas==2.1.4
+PyMySQL==1.0.2
+virtualenv==20.26.3

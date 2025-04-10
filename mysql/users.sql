@@ -1,0 +1,5 @@
+
+CREATE DATABASE airflow;
+
+CREATE USER 'airflow'@'%' IDENTIFIED BY 'airflow' WITH MAX_USER_CONNECTIONS 50;
+GRANT ALL PRIVILEGES ON *.* TO 'airflow'@'%';
