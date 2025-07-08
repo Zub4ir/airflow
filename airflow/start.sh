@@ -4,7 +4,7 @@ airflow db migrate
 
 # create admin users
 echo '---> create user'
-airflow users create --username 'jordan.perterson' --firstname jordan --lastname perterson --role Admin --email 'jordan.perterson@gmail.co.za' --password 'jordan.perterson'
+airflow users create --username 'jordan.peterson' --firstname jordan --lastname peterson --role Admin --email 'jordan.peterson@gmail.co.za' --password 'jordan.peterson'
 
 # start webserver in background
 echo '---> start webserver screen'
