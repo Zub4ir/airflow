@@ -1,4 +1,4 @@
-FROM python:3.11.9
+FROM python:3.12.10
 
 WORKDIR /usr/src/air
 
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y screen
 RUN apt-get install -y screen
 
 # install airflow
-RUN pip install "apache-airflow[celery]==2.9.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.3/constraints-3.11.txt"
+RUN pip install "apache-airflow[celery]==2.10.5" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.12.txt"
 RUN pip install --no-cache-dir -r requirements.txt
 
 # modify entry point for custom container starting commands
